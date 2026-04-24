@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
+import Image from 'next/image';
 import { IoLocation } from "react-icons/io5";
 import { MdMarkEmailRead } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
@@ -54,15 +55,20 @@ const Contact = () => {
       </h1>
 
       <div className="flex md:w-1/2 w-full flex-col md:flex-row mx-auto items-center md:justify-between px-8 gap-8">
-        <img
-          src="/images/girl.png" // Replace with your image URL
-          alt="Contact Us"
-          className="w-full max-w-xs rounded-lg shadow-lg"
-        />
+        <div className="w-full max-w-xs rounded-lg shadow-lg overflow-hidden relative">
+          <Image
+            src="/images/girl.png"
+            alt="Contact Us"
+            width={320}
+            height={320}
+            className="w-full h-auto"
+            style={{ maxWidth: '100%', height: 'auto' }}
+          />
+        </div>
 
         <div className="flex flex-col flex-1 md:pl-20">
           <h1 className="text-4xl font-extrabold mb-9 text-center md:text-start mt-5 bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text">
-            We're Here to Help
+            We&apos;re Here to Help
           </h1>
           <p className="text-sm text-slate-500 mb-5">
             Have questions about our products, need help with an order, or want to provide feedback? Our team is here to assist you.

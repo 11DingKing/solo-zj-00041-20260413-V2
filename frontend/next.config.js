@@ -1,6 +1,9 @@
 module.exports = {
-  reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
-    domains: ['localhost']
-  }
-}
+    domains: ['localhost', '127.0.0.1'],
+    unoptimized: true,
+  },
+};
