@@ -51,7 +51,7 @@ class Migration(migrations.Migration):
                 ('email_sent', models.BooleanField(default=False)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),
-                ('last_change_log', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='alerts', to='product_management inventorychangelog')),
+                ('last_change_log', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='alerts', to='product_management.inventorychangelog')),
                 ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='stock_alerts', to='product_management.product')),
             ],
             options={
